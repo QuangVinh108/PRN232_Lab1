@@ -28,7 +28,16 @@ namespace PRN232.Lab1.Services.Service
                 StudentId = s.StudentId,
                 FullName = s.FullName,
                 Email = s.Email,
-                DateOfBirth = s.DateOfBirth
+                DateOfBirth = s.DateOfBirth,
+                // Map Enrollments nếu đã được Include (Expand=enrollments)
+                Enrollments = s.Enrollments?.Select(e => new EnrollmentBusinessModel
+                {
+                    EnrollmentId = e.EnrollmentId,
+                    StudentId = e.StudentId,
+                    CourseId = e.CourseId,
+                    EnrollDate = e.EnrollDate,
+                    Status = e.Status
+                }).ToList()
             });
 
             return (mappedItems, result.TotalCount);

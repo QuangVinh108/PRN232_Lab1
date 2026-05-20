@@ -124,7 +124,7 @@ namespace PRN232.Lab1.API.Controllers
             {
                 FullName = request.FullName,
                 Email = request.Email,
-                DateOfBirth = request.DateOfBirth
+                DateOfBirth = request.DateOfBirth!.Value
             };
 
             var createdStudent = await _studentService.CreateStudentAsync(model);
@@ -153,7 +153,7 @@ namespace PRN232.Lab1.API.Controllers
             {
                 FullName = request.FullName,
                 Email = request.Email,
-                DateOfBirth = request.DateOfBirth
+                DateOfBirth = request.DateOfBirth!.Value
             };
 
             var isUpdated = await _studentService.UpdateStudentAsync(id, model);
