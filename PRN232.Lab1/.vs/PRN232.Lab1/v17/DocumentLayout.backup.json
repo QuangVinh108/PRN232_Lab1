@@ -1,0 +1,299 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|d:\\learning\\ki_8\\prn232\\lab_1\\prn232.lab1\\prn232.lab1.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|solutionrelative:prn232.lab1.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|d:\\learning\\ki_8\\prn232\\lab_1\\prn232.lab1\\prn232.lab1.api\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|solutionrelative:prn232.lab1.api\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1A27E32-3905-4C05-AB5B-BBA455797FB4}|PRN232.Lab1.Services\\PRN232.Lab1.Services.csproj|d:\\learning\\ki_8\\prn232\\lab_1\\prn232.lab1\\prn232.lab1.services\\businessmodels\\studentbusinessmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1A27E32-3905-4C05-AB5B-BBA455797FB4}|PRN232.Lab1.Services\\PRN232.Lab1.Services.csproj|solutionrelative:prn232.lab1.services\\businessmodels\\studentbusinessmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1A27E32-3905-4C05-AB5B-BBA455797FB4}|PRN232.Lab1.Services\\PRN232.Lab1.Services.csproj|d:\\learning\\ki_8\\prn232\\lab_1\\prn232.lab1\\prn232.lab1.services\\businessmodels\\enrollmentbusinessmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1A27E32-3905-4C05-AB5B-BBA455797FB4}|PRN232.Lab1.Services\\PRN232.Lab1.Services.csproj|solutionrelative:prn232.lab1.services\\businessmodels\\enrollmentbusinessmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1A27E32-3905-4C05-AB5B-BBA455797FB4}|PRN232.Lab1.Services\\PRN232.Lab1.Services.csproj|d:\\learning\\ki_8\\prn232\\lab_1\\prn232.lab1\\prn232.lab1.services\\iservice\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1A27E32-3905-4C05-AB5B-BBA455797FB4}|PRN232.Lab1.Services\\PRN232.Lab1.Services.csproj|solutionrelative:prn232.lab1.services\\iservice\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1A27E32-3905-4C05-AB5B-BBA455797FB4}|PRN232.Lab1.Services\\PRN232.Lab1.Services.csproj|d:\\learning\\ki_8\\prn232\\lab_1\\prn232.lab1\\prn232.lab1.services\\service\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1A27E32-3905-4C05-AB5B-BBA455797FB4}|PRN232.Lab1.Services\\PRN232.Lab1.Services.csproj|solutionrelative:prn232.lab1.services\\service\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|d:\\learning\\ki_8\\prn232\\lab_1\\prn232.lab1\\prn232.lab1.api\\responsemodels\\studentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|solutionrelative:prn232.lab1.api\\responsemodels\\studentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|d:\\learning\\ki_8\\prn232\\lab_1\\prn232.lab1\\prn232.lab1.api\\responsemodels\\enrollmentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|solutionrelative:prn232.lab1.api\\responsemodels\\enrollmentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{939FF585-658A-4690-8988-9B7D4624A178}|PRN232.Lab1.Repositories\\PRN232.Lab1.Repositories.csproj|d:\\learning\\ki_8\\prn232\\lab_1\\prn232.lab1\\prn232.lab1.repositories\\irepository\\istudentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{939FF585-658A-4690-8988-9B7D4624A178}|PRN232.Lab1.Repositories\\PRN232.Lab1.Repositories.csproj|solutionrelative:prn232.lab1.repositories\\irepository\\istudentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{939FF585-658A-4690-8988-9B7D4624A178}|PRN232.Lab1.Repositories\\PRN232.Lab1.Repositories.csproj|d:\\learning\\ki_8\\prn232\\lab_1\\prn232.lab1\\prn232.lab1.repositories\\repository\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{939FF585-658A-4690-8988-9B7D4624A178}|PRN232.Lab1.Repositories\\PRN232.Lab1.Repositories.csproj|solutionrelative:prn232.lab1.repositories\\repository\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|d:\\learning\\ki_8\\prn232\\lab_1\\prn232.lab1\\prn232.lab1.api\\requestmodels\\studentqueryparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|solutionrelative:prn232.lab1.api\\requestmodels\\studentqueryparameters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|d:\\learning\\ki_8\\prn232\\lab_1\\prn232.lab1\\prn232.lab1.api\\responsemodels\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|solutionrelative:prn232.lab1.api\\responsemodels\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|d:\\learning\\ki_8\\prn232\\lab_1\\prn232.lab1\\prn232.lab1.api\\prn232.lab1.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|solutionrelative:prn232.lab1.api\\prn232.lab1.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|d:\\learning\\ki_8\\prn232\\lab_1\\prn232.lab1\\prn232.lab1.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|solutionrelative:prn232.lab1.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|d:\\learning\\ki_8\\prn232\\lab_1\\prn232.lab1\\prn232.lab1.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|solutionrelative:prn232.lab1.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|d:\\learning\\ki_8\\prn232\\lab_1\\prn232.lab1\\prn232.lab1.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC6C35FF-53DB-421A-B162-3F08F950EF64}|PRN232.Lab1.API\\PRN232.Lab1.API.csproj|solutionrelative:prn232.lab1.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2026-05-18T02:48:41.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\Dockerfile",
+              "RelativeDocumentMoniker": "PRN232.Lab1.API\\Dockerfile",
+              "ToolTip": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\Dockerfile",
+              "RelativeToolTip": "PRN232.Lab1.API\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-18T02:47:46.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EnrollmentBusinessModel.cs",
+              "DocumentMoniker": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.Services\\BusinessModels\\EnrollmentBusinessModel.cs",
+              "RelativeDocumentMoniker": "PRN232.Lab1.Services\\BusinessModels\\EnrollmentBusinessModel.cs",
+              "ToolTip": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.Services\\BusinessModels\\EnrollmentBusinessModel.cs",
+              "RelativeToolTip": "PRN232.Lab1.Services\\BusinessModels\\EnrollmentBusinessModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T17:03:14.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StudentBusinessModel.cs",
+              "DocumentMoniker": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.Services\\BusinessModels\\StudentBusinessModel.cs",
+              "RelativeDocumentMoniker": "PRN232.Lab1.Services\\BusinessModels\\StudentBusinessModel.cs",
+              "ToolTip": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.Services\\BusinessModels\\StudentBusinessModel.cs",
+              "RelativeToolTip": "PRN232.Lab1.Services\\BusinessModels\\StudentBusinessModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T16:38:15.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IStudentService.cs",
+              "DocumentMoniker": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.Services\\IService\\IStudentService.cs",
+              "RelativeDocumentMoniker": "PRN232.Lab1.Services\\IService\\IStudentService.cs",
+              "ToolTip": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.Services\\IService\\IStudentService.cs",
+              "RelativeToolTip": "PRN232.Lab1.Services\\IService\\IStudentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAACcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T16:17:23.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\Controllers\\StudentsController.cs",
+              "RelativeDocumentMoniker": "PRN232.Lab1.API\\Controllers\\StudentsController.cs",
+              "ToolTip": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\Controllers\\StudentsController.cs",
+              "RelativeToolTip": "PRN232.Lab1.API\\Controllers\\StudentsController.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAYwEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T16:21:30.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudentService.cs",
+              "DocumentMoniker": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.Services\\Service\\StudentService.cs",
+              "RelativeDocumentMoniker": "PRN232.Lab1.Services\\Service\\StudentService.cs",
+              "ToolTip": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.Services\\Service\\StudentService.cs",
+              "RelativeToolTip": "PRN232.Lab1.Services\\Service\\StudentService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBYAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T16:17:43.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StudentResponse.cs",
+              "DocumentMoniker": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\ResponseModels\\StudentResponse.cs",
+              "RelativeDocumentMoniker": "PRN232.Lab1.API\\ResponseModels\\StudentResponse.cs",
+              "ToolTip": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\ResponseModels\\StudentResponse.cs",
+              "RelativeToolTip": "PRN232.Lab1.API\\ResponseModels\\StudentResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T16:39:49.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EnrollmentResponse.cs",
+              "DocumentMoniker": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\ResponseModels\\EnrollmentResponse.cs",
+              "RelativeDocumentMoniker": "PRN232.Lab1.API\\ResponseModels\\EnrollmentResponse.cs",
+              "ToolTip": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\ResponseModels\\EnrollmentResponse.cs",
+              "RelativeToolTip": "PRN232.Lab1.API\\ResponseModels\\EnrollmentResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T17:01:40.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IStudentRepository.cs",
+              "DocumentMoniker": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.Repositories\\IRepository\\IStudentRepository.cs",
+              "RelativeDocumentMoniker": "PRN232.Lab1.Repositories\\IRepository\\IStudentRepository.cs",
+              "ToolTip": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.Repositories\\IRepository\\IStudentRepository.cs",
+              "RelativeToolTip": "PRN232.Lab1.Repositories\\IRepository\\IStudentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAACPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T16:15:11.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.Repositories\\Repository\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "PRN232.Lab1.Repositories\\Repository\\StudentRepository.cs",
+              "ToolTip": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.Repositories\\Repository\\StudentRepository.cs",
+              "RelativeToolTip": "PRN232.Lab1.Repositories\\Repository\\StudentRepository.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAcwBcAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T16:15:31.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "StudentQueryParameters.cs",
+              "DocumentMoniker": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\RequestModels\\StudentQueryParameters.cs",
+              "RelativeDocumentMoniker": "PRN232.Lab1.API\\RequestModels\\StudentQueryParameters.cs",
+              "ToolTip": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\RequestModels\\StudentQueryParameters.cs",
+              "RelativeToolTip": "PRN232.Lab1.API\\RequestModels\\StudentQueryParameters.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T16:48:23.874Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\ResponseModels\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "PRN232.Lab1.API\\ResponseModels\\ApiResponse.cs",
+              "ToolTip": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\ResponseModels\\ApiResponse.cs",
+              "RelativeToolTip": "PRN232.Lab1.API\\ResponseModels\\ApiResponse.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAIA/wBoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T16:47:25.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PRN232.Lab1.API.http",
+              "DocumentMoniker": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\PRN232.Lab1.API.http",
+              "RelativeDocumentMoniker": "PRN232.Lab1.API\\PRN232.Lab1.API.http",
+              "ToolTip": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\PRN232.Lab1.API.http",
+              "RelativeToolTip": "PRN232.Lab1.API\\PRN232.Lab1.API.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-05-15T16:29:35.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "PRN232.Lab1.API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "PRN232.Lab1.API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-15T16:25:58.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\appsettings.json",
+              "RelativeDocumentMoniker": "PRN232.Lab1.API\\appsettings.json",
+              "ToolTip": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\appsettings.json",
+              "RelativeToolTip": "PRN232.Lab1.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-15T15:53:28.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\Program.cs",
+              "RelativeDocumentMoniker": "PRN232.Lab1.API\\Program.cs",
+              "ToolTip": "D:\\Learning\\Ki_8\\PRN232\\Lab_1\\PRN232.Lab1\\PRN232.Lab1.API\\Program.cs",
+              "RelativeToolTip": "PRN232.Lab1.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-15T16:08:52.417Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

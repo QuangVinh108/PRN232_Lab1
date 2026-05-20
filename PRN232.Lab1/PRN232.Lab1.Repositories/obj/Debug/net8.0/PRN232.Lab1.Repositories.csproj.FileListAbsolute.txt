@@ -1,0 +1,14 @@
+D:\Learning\Ki_8\PRN232\Lab_1\PRN232.Lab1\PRN232.Lab1.Repositories\bin\Debug\net8.0\PRN232.Lab1.Repositories.deps.json
+D:\Learning\Ki_8\PRN232\Lab_1\PRN232.Lab1\PRN232.Lab1.Repositories\bin\Debug\net8.0\PRN232.Lab1.Repositories.dll
+D:\Learning\Ki_8\PRN232\Lab_1\PRN232.Lab1\PRN232.Lab1.Repositories\bin\Debug\net8.0\PRN232.Lab1.Repositories.pdb
+D:\Learning\Ki_8\PRN232\Lab_1\PRN232.Lab1\PRN232.Lab1.Repositories\obj\Debug\net8.0\PRN232.Lab1.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learning\Ki_8\PRN232\Lab_1\PRN232.Lab1\PRN232.Lab1.Repositories\obj\Debug\net8.0\PRN232.Lab1.Repositories.AssemblyInfoInputs.cache
+D:\Learning\Ki_8\PRN232\Lab_1\PRN232.Lab1\PRN232.Lab1.Repositories\obj\Debug\net8.0\PRN232.Lab1.Repositories.AssemblyInfo.cs
+D:\Learning\Ki_8\PRN232\Lab_1\PRN232.Lab1\PRN232.Lab1.Repositories\obj\Debug\net8.0\PRN232.Lab1.Repositories.csproj.CoreCompileInputs.cache
+D:\Learning\Ki_8\PRN232\Lab_1\PRN232.Lab1\PRN232.Lab1.Repositories\obj\Debug\net8.0\PRN232.Lab1.Repositories.dll
+D:\Learning\Ki_8\PRN232\Lab_1\PRN232.Lab1\PRN232.Lab1.Repositories\obj\Debug\net8.0\refint\PRN232.Lab1.Repositories.dll
+D:\Learning\Ki_8\PRN232\Lab_1\PRN232.Lab1\PRN232.Lab1.Repositories\obj\Debug\net8.0\PRN232.Lab1.Repositories.pdb
+D:\Learning\Ki_8\PRN232\Lab_1\PRN232.Lab1\PRN232.Lab1.Repositories\obj\Debug\net8.0\ref\PRN232.Lab1.Repositories.dll
+D:\Learning\Ki_8\PRN232\Lab_1\PRN232.Lab1\PRN232.Lab1.Repositories\bin\Debug\net8.0\PRN232.Lab1.Repositories.runtimeconfig.json
+D:\Learning\Ki_8\PRN232\Lab_1\PRN232.Lab1\PRN232.Lab1.Repositories\obj\Debug\net8.0\PRN232.Lab1.Repositories.csproj.AssemblyReference.cache
+D:\Learning\Ki_8\PRN232\Lab_1\PRN232.Lab1\PRN232.Lab1.Repositories\obj\Debug\net8.0\PRN232.Lab1.Repositories.genruntimeconfig.cache

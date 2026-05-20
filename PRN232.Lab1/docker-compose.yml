@@ -1,0 +1,32 @@
+services:
+  # Service 1: Cơ sở dữ liệu SQL Server
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: prn232_sql_server
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Vinh@123456
+    ports:
+      - "14333:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+
+
+  # Service 3: Ứng dụng API
+  api:
+    image: prn232-lab1-api
+    container_name: prn232_api
+    build:
+      context: .
+      dockerfile: PRN232.Lab1.API/Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    restart: on-failure
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db;Database=PRN232_Lab1;User Id=sa;Password=Vinh@123456;TrustServerCertificate=True;
+
+volumes:
+  sql_data:
