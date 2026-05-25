@@ -9,5 +9,7 @@ namespace PRN232.Lab1.Services.BusinessModels
         public string CourseName { get; set; } = null!;
         public int SemesterId { get; set; }
         public List<EnrollmentBusinessModel>? Enrollments { get; set; }
+        public List<StudentBusinessModel>? Students { get; set; }
+        public SemesterBusinessModel? Semester { get; set; }
     }
 }

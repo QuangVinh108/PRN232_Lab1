@@ -25,15 +25,21 @@ namespace PRN232.Lab1.Services.Service
                 SemesterId = s.SemesterId,
                 SemesterName = s.SemesterName,
                 StartDate = s.StartDate,
-                EndDate = s.EndDate
+                EndDate = s.EndDate,
+                Courses = s.Courses?.Select(c => new CourseBusinessModel
+                {
+                    CourseId = c.CourseId,
+                    CourseName = c.CourseName,
+                    SemesterId = c.SemesterId
+                }).ToList()
             });
 
             return (mappedItems, result.TotalCount);
         }
 
-        public async Task<SemesterBusinessModel> GetSemesterByIdAsync(int id)
+        public async Task<SemesterBusinessModel> GetSemesterByIdAsync(int id, string? expand = null)
         {
-            var s = await _repository.GetSemesterByIdAsync(id);
+            var s = await _repository.GetSemesterByIdAsync(id, expand);
             if (s == null) return null;
 
             return new SemesterBusinessModel
@@ -41,7 +47,13 @@ namespace PRN232.Lab1.Services.Service
                 SemesterId = s.SemesterId,
                 SemesterName = s.SemesterName,
                 StartDate = s.StartDate,
-                EndDate = s.EndDate
+                EndDate = s.EndDate,
+                Courses = s.Courses?.Select(c => new CourseBusinessModel
+                {
+                    CourseId = c.CourseId,
+                    CourseName = c.CourseName,
+                    SemesterId = c.SemesterId
+                }).ToList()
             };
         }
 

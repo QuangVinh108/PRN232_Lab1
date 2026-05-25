@@ -24,7 +24,11 @@ namespace PRN232.Lab1.Repositories.Repository
             
             if (!string.IsNullOrWhiteSpace(expand))
             {
-                if (expand.Contains("enrollment", StringComparison.OrdinalIgnoreCase))
+                if (expand.Contains("student", StringComparison.OrdinalIgnoreCase))
+                {
+                    query = query.Include(c => c.Enrollments).ThenInclude(e => e.Student);
+                }
+                else if (expand.Contains("enrollment", StringComparison.OrdinalIgnoreCase))
                 {
                     query = query.Include(c => c.Enrollments);
                 }
@@ -55,9 +59,27 @@ namespace PRN232.Lab1.Repositories.Repository
             return (items, totalCount);
         }
 
-        public async Task<Course> GetCourseByIdAsync(int id)
+        public async Task<Course> GetCourseByIdAsync(int id, string? expand = null)
         {
-            return await _context.Courses.FirstOrDefaultAsync(c => c.CourseId == id);
+            var query = _context.Courses.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(expand))
+            {
+                if (expand.Contains("student", StringComparison.OrdinalIgnoreCase))
+                {
+                    query = query.Include(c => c.Enrollments).ThenInclude(e => e.Student);
+                }
+                else if (expand.Contains("enrollment", StringComparison.OrdinalIgnoreCase))
+                {
+                    query = query.Include(c => c.Enrollments);
+                }
+                if (expand.Contains("semester", StringComparison.OrdinalIgnoreCase))
+                {
+                    query = query.Include(c => c.Semester);
+                }
+            }
+
+            return await query.FirstOrDefaultAsync(c => c.CourseId == id);
         }
 
         public async Task<Course> CreateCourseAsync(Course course)

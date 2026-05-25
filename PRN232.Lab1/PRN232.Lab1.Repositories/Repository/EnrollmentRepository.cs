@@ -55,9 +55,21 @@ namespace PRN232.Lab1.Repositories.Repository
             return (items, totalCount);
         }
 
-        public async Task<Enrollment> GetEnrollmentByIdAsync(int id)
+        public async Task<Enrollment> GetEnrollmentByIdAsync(int id, string? expand = null)
         {
-            return await _context.Enrollments.FirstOrDefaultAsync(e => e.EnrollmentId == id);
+            var query = _context.Enrollments.AsQueryable();
+            if (!string.IsNullOrWhiteSpace(expand))
+            {
+                if (expand.Contains("student", StringComparison.OrdinalIgnoreCase))
+                {
+                    query = query.Include(e => e.Student);
+                }
+                if (expand.Contains("course", StringComparison.OrdinalIgnoreCase))
+                {
+                    query = query.Include(e => e.Course);
+                }
+            }
+            return await query.FirstOrDefaultAsync(e => e.EnrollmentId == id);
         }
 
         public async Task<Enrollment> CreateEnrollmentAsync(Enrollment enrollment)

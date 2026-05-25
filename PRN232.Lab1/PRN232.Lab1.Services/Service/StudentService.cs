@@ -43,17 +43,25 @@ namespace PRN232.Lab1.Services.Service
             return (mappedItems, result.TotalCount);
         }
 
-        public async Task<StudentBusinessModel> GetStudentByIdAsync(int id)
+        public async Task<StudentBusinessModel> GetStudentByIdAsync(int id, string? expand = null)
         {
-            var s = await _repository.GetStudentByIdAsync(id);
+            var s = await _repository.GetStudentByIdAsync(id, expand);
             if (s == null) return null;
-
+ 
             return new StudentBusinessModel
             {
                 StudentId = s.StudentId,
                 FullName = s.FullName,
                 Email = s.Email,
-                DateOfBirth = s.DateOfBirth
+                DateOfBirth = s.DateOfBirth,
+                Enrollments = s.Enrollments?.Select(e => new EnrollmentBusinessModel
+                {
+                    EnrollmentId = e.EnrollmentId,
+                    StudentId = e.StudentId,
+                    CourseId = e.CourseId,
+                    EnrollDate = e.EnrollDate,
+                    Status = e.Status
+                }).ToList()
             };
         }
 

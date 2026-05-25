@@ -21,6 +21,10 @@ namespace PRN232.Lab1.API.Controllers
         }
 
         // GET: api/students
+        /// <summary>
+        /// Get a paginated list of students with optional search, sorting, filtering, and relation expansion
+        /// </summary>
+        /// <param name="queryParams">The query parameter options for search, sort, page, size, fields, and expand</param>
         [HttpGet]
         public async Task<IActionResult> GetAllStudents([FromQuery] StudentQueryParameters queryParams)
         {
@@ -86,11 +90,16 @@ namespace PRN232.Lab1.API.Controllers
         }
 
         // GET: api/students/{id}
+        /// <summary>
+        /// Get student details by ID
+        /// </summary>
+        /// <param name="id">ID of the student to retrieve</param>
+        /// <param name="expand">Expand related entities (e.g. 'enrollments')</param>
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetStudentById(int id)
+        public async Task<IActionResult> GetStudentById(int id, [FromQuery] string? expand)
         {
             // 1. Lấy dữ liệu từ Service (Trả về StudentBusinessModel)
-            var student = await _studentService.GetStudentByIdAsync(id);
+            var student = await _studentService.GetStudentByIdAsync(id, expand);
 
             // 2. Trả về 404 Not Found nếu không có dữ liệu
             if (student == null)
@@ -104,7 +113,15 @@ namespace PRN232.Lab1.API.Controllers
                 StudentId = student.StudentId,
                 FullName = student.FullName,
                 Email = student.Email,
-                DateOfBirth = student.DateOfBirth
+                DateOfBirth = student.DateOfBirth,
+                Enrollments = student.Enrollments?.Select(e => new EnrollmentResponse
+                {
+                    EnrollmentId = e.EnrollmentId,
+                    StudentId = e.StudentId,
+                    CourseId = e.CourseId,
+                    EnrollDate = e.EnrollDate,
+                    Status = e.Status
+                }).ToList()
             };
 
             // 4. Trả về 200 OK nếu tìm thấy
@@ -112,6 +129,10 @@ namespace PRN232.Lab1.API.Controllers
         }
 
         // POST: api/students
+        /// <summary>
+        /// Create a new student profile
+        /// </summary>
+        /// <param name="request">The student creation request body</param>
         [HttpPost]
         public async Task<IActionResult> CreateStudent([FromBody] StudentRequest request)
         {
@@ -141,6 +162,11 @@ namespace PRN232.Lab1.API.Controllers
         }
 
         // PUT: api/students/{id}
+        /// <summary>
+        /// Update an existing student profile by ID
+        /// </summary>
+        /// <param name="id">ID of the student to update</param>
+        /// <param name="request">The student update request body</param>
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateStudent(int id, [FromBody] StudentRequest request)
         {
@@ -167,6 +193,10 @@ namespace PRN232.Lab1.API.Controllers
         }
 
         // DELETE: api/students/{id}
+        /// <summary>
+        /// Delete an existing student profile by ID
+        /// </summary>
+        /// <param name="id">ID of the student to delete</param>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteStudent(int id)
         {

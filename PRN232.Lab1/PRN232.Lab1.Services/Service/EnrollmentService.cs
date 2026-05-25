@@ -26,15 +26,28 @@ namespace PRN232.Lab1.Services.Service
                 StudentId = e.StudentId,
                 CourseId = e.CourseId,
                 EnrollDate = e.EnrollDate,
-                Status = e.Status
+                Status = e.Status,
+                Student = e.Student != null ? new StudentBusinessModel
+                {
+                    StudentId = e.Student.StudentId,
+                    FullName = e.Student.FullName,
+                    Email = e.Student.Email,
+                    DateOfBirth = e.Student.DateOfBirth
+                } : null,
+                Course = e.Course != null ? new CourseBusinessModel
+                {
+                    CourseId = e.Course.CourseId,
+                    CourseName = e.Course.CourseName,
+                    SemesterId = e.Course.SemesterId
+                } : null
             });
 
             return (mappedItems, result.TotalCount);
         }
 
-        public async Task<EnrollmentBusinessModel> GetEnrollmentByIdAsync(int id)
+        public async Task<EnrollmentBusinessModel> GetEnrollmentByIdAsync(int id, string? expand = null)
         {
-            var e = await _repository.GetEnrollmentByIdAsync(id);
+            var e = await _repository.GetEnrollmentByIdAsync(id, expand);
             if (e == null) return null;
 
             return new EnrollmentBusinessModel
@@ -43,7 +56,20 @@ namespace PRN232.Lab1.Services.Service
                 StudentId = e.StudentId,
                 CourseId = e.CourseId,
                 EnrollDate = e.EnrollDate,
-                Status = e.Status
+                Status = e.Status,
+                Student = e.Student != null ? new StudentBusinessModel
+                {
+                    StudentId = e.Student.StudentId,
+                    FullName = e.Student.FullName,
+                    Email = e.Student.Email,
+                    DateOfBirth = e.Student.DateOfBirth
+                } : null,
+                Course = e.Course != null ? new CourseBusinessModel
+                {
+                    CourseId = e.Course.CourseId,
+                    CourseName = e.Course.CourseName,
+                    SemesterId = e.Course.SemesterId
+                } : null
             };
         }
 

@@ -25,28 +25,81 @@ namespace PRN232.Lab1.Services.Service
                 CourseId = c.CourseId,
                 CourseName = c.CourseName,
                 SemesterId = c.SemesterId,
+                Semester = c.Semester != null ? new SemesterBusinessModel
+                {
+                    SemesterId = c.Semester.SemesterId,
+                    SemesterName = c.Semester.SemesterName,
+                    StartDate = c.Semester.StartDate,
+                    EndDate = c.Semester.EndDate
+                } : null,
                 Enrollments = c.Enrollments?.Select(e => new EnrollmentBusinessModel
                 {
                     EnrollmentId = e.EnrollmentId,
+                    StudentId = e.StudentId,
                     CourseId = e.CourseId,
                     EnrollDate = e.EnrollDate,
-                    Status = e.Status
+                    Status = e.Status,
+                    Student = e.Student != null ? new StudentBusinessModel
+                    {
+                        StudentId = e.Student.StudentId,
+                        FullName = e.Student.FullName,
+                        Email = e.Student.Email,
+                        DateOfBirth = e.Student.DateOfBirth
+                    } : null,
+                    Course = null
+                }).ToList(),
+                Students = c.Enrollments?.Where(e => e.Student != null).Select(e => new StudentBusinessModel
+                {
+                    StudentId = e.Student.StudentId,
+                    FullName = e.Student.FullName,
+                    Email = e.Student.Email,
+                    DateOfBirth = e.Student.DateOfBirth
                 }).ToList()
             });
 
             return (mappedItems, result.TotalCount);
         }
 
-        public async Task<CourseBusinessModel> GetCourseByIdAsync(int id)
+        public async Task<CourseBusinessModel> GetCourseByIdAsync(int id, string? expand = null)
         {
-            var c = await _repository.GetCourseByIdAsync(id);
+            var c = await _repository.GetCourseByIdAsync(id, expand);
             if (c == null) return null;
 
             return new CourseBusinessModel
             {
                 CourseId = c.CourseId,
                 CourseName = c.CourseName,
-                SemesterId = c.SemesterId
+                SemesterId = c.SemesterId,
+                Semester = c.Semester != null ? new SemesterBusinessModel
+                {
+                    SemesterId = c.Semester.SemesterId,
+                    SemesterName = c.Semester.SemesterName,
+                    StartDate = c.Semester.StartDate,
+                    EndDate = c.Semester.EndDate
+                } : null,
+                Enrollments = c.Enrollments != null && c.Enrollments.Any() ? c.Enrollments.Select(e => new EnrollmentBusinessModel
+                {
+                    EnrollmentId = e.EnrollmentId,
+                    StudentId = e.StudentId,
+                    CourseId = e.CourseId,
+                    EnrollDate = e.EnrollDate,
+                    Status = e.Status,
+                    Student = e.Student != null ? new StudentBusinessModel
+                    {
+                        StudentId = e.Student.StudentId,
+                        FullName = e.Student.FullName,
+                        Email = e.Student.Email,
+                        DateOfBirth = e.Student.DateOfBirth
+                    } : null,
+                    Course = null
+                }).ToList() : null,
+                Students = c.Enrollments != null && c.Enrollments.Any(e => e.Student != null) ? c.Enrollments.Where(e => e.Student != null).Select(e => new StudentBusinessModel
+                {
+                    StudentId = e.Student.StudentId,
+                    FullName = e.Student.FullName,
+                    Email = e.Student.Email,
+                    DateOfBirth = e.Student.DateOfBirth
+                }).ToList() : null
             };
         }
 

@@ -22,6 +22,10 @@ namespace PRN232.Lab1.API.Controllers
             _semesterService = semesterService;
         }
 
+        /// <summary>
+        /// Get a paginated list of semesters with optional search, sorting, filtering, and relation expansion
+        /// </summary>
+        /// <param name="queryParams">The query parameter options for search, sort, page, size, fields, and expand</param>
         [HttpGet]
         public async Task<IActionResult> GetAllSemesters([FromQuery] SemesterQueryParameters queryParams)
         {
@@ -46,7 +50,13 @@ namespace PRN232.Lab1.API.Controllers
                 SemesterId = s.SemesterId,
                 SemesterName = s.SemesterName,
                 StartDate = s.StartDate,
-                EndDate = s.EndDate
+                EndDate = s.EndDate,
+                Courses = s.Courses?.Select(c => new CourseResponse
+                {
+                    CourseId = c.CourseId,
+                    CourseName = c.CourseName,
+                    SemesterId = c.SemesterId
+                }).ToList()
             });
 
             if (!string.IsNullOrWhiteSpace(queryParams.Fields))
@@ -75,10 +85,15 @@ namespace PRN232.Lab1.API.Controllers
             return Ok(ApiResponse<IEnumerable<SemesterResponse>>.Ok(responseModels, metadata));
         }
 
+        /// <summary>
+        /// Get semester details by ID
+        /// </summary>
+        /// <param name="id">ID of the semester to retrieve</param>
+        /// <param name="expand">Expand related entities (e.g. 'courses')</param>
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetSemesterById(int id)
+        public async Task<IActionResult> GetSemesterById(int id, [FromQuery] string? expand)
         {
-            var semester = await _semesterService.GetSemesterByIdAsync(id);
+            var semester = await _semesterService.GetSemesterByIdAsync(id, expand);
 
             if (semester == null)
             {
@@ -90,12 +105,22 @@ namespace PRN232.Lab1.API.Controllers
                 SemesterId = semester.SemesterId,
                 SemesterName = semester.SemesterName,
                 StartDate = semester.StartDate,
-                EndDate = semester.EndDate
+                EndDate = semester.EndDate,
+                Courses = semester.Courses?.Select(c => new CourseResponse
+                {
+                    CourseId = c.CourseId,
+                    CourseName = c.CourseName,
+                    SemesterId = c.SemesterId
+                }).ToList()
             };
 
             return Ok(ApiResponse<SemesterResponse>.Ok(responseModel));
         }
 
+        /// <summary>
+        /// Create a new semester
+        /// </summary>
+        /// <param name="request">The semester creation request body</param>
         [HttpPost]
         public async Task<IActionResult> CreateSemester([FromBody] SemesterRequest request)
         {
@@ -124,6 +149,11 @@ namespace PRN232.Lab1.API.Controllers
             return CreatedAtAction(nameof(GetSemesterById), new { id = response.SemesterId }, ApiResponse<SemesterResponse>.Ok(response));
         }
 
+        /// <summary>
+        /// Update an existing semester by ID
+        /// </summary>
+        /// <param name="id">ID of the semester to update</param>
+        /// <param name="request">The semester update request body</param>
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateSemester(int id, [FromBody] SemesterRequest request)
         {
@@ -149,6 +179,10 @@ namespace PRN232.Lab1.API.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Delete an existing semester by ID
+        /// </summary>
+        /// <param name="id">ID of the semester to delete</param>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSemester(int id)
         {

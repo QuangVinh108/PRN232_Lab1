@@ -22,6 +22,10 @@ namespace PRN232.Lab1.API.Controllers
             _subjectService = subjectService;
         }
 
+        /// <summary>
+        /// Get a paginated list of subjects with optional search, sorting, filtering, and relation expansion
+        /// </summary>
+        /// <param name="queryParams">The query parameter options for search, sort, page, size, fields, and expand</param>
         [HttpGet]
         public async Task<IActionResult> GetAllSubjects([FromQuery] SubjectQueryParameters queryParams)
         {
@@ -75,6 +79,10 @@ namespace PRN232.Lab1.API.Controllers
             return Ok(ApiResponse<IEnumerable<SubjectResponse>>.Ok(responseModels, metadata));
         }
 
+        /// <summary>
+        /// Get subject details by ID
+        /// </summary>
+        /// <param name="id">ID of the subject to retrieve</param>
         [HttpGet("{id}")]
         public async Task<IActionResult> GetSubjectById(int id)
         {
@@ -96,6 +104,10 @@ namespace PRN232.Lab1.API.Controllers
             return Ok(ApiResponse<SubjectResponse>.Ok(responseModel));
         }
 
+        /// <summary>
+        /// Create a new subject
+        /// </summary>
+        /// <param name="request">The subject creation request body</param>
         [HttpPost]
         public async Task<IActionResult> CreateSubject([FromBody] SubjectRequest request)
         {
@@ -124,6 +136,11 @@ namespace PRN232.Lab1.API.Controllers
             return CreatedAtAction(nameof(GetSubjectById), new { id = response.SubjectId }, ApiResponse<SubjectResponse>.Ok(response));
         }
 
+        /// <summary>
+        /// Update an existing subject by ID
+        /// </summary>
+        /// <param name="id">ID of the subject to update</param>
+        /// <param name="request">The subject update request body</param>
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateSubject(int id, [FromBody] SubjectRequest request)
         {
@@ -149,6 +166,10 @@ namespace PRN232.Lab1.API.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Delete an existing subject by ID
+        /// </summary>
+        /// <param name="id">ID of the subject to delete</param>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSubject(int id)
         {

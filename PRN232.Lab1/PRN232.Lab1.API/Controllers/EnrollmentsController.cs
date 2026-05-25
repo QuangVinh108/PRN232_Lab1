@@ -22,6 +22,10 @@ namespace PRN232.Lab1.API.Controllers
             _enrollmentService = enrollmentService;
         }
 
+        /// <summary>
+        /// Get a paginated list of enrollments with optional search, sorting, filtering, and relation expansion
+        /// </summary>
+        /// <param name="queryParams">The query parameter options for search, sort, page, size, fields, and expand</param>
         [HttpGet]
         public async Task<IActionResult> GetAllEnrollments([FromQuery] EnrollmentQueryParameters queryParams)
         {
@@ -47,7 +51,20 @@ namespace PRN232.Lab1.API.Controllers
                 StudentId = e.StudentId,
                 CourseId = e.CourseId,
                 EnrollDate = e.EnrollDate,
-                Status = e.Status
+                Status = e.Status,
+                Student = e.Student != null ? new StudentResponse
+                {
+                    StudentId = e.Student.StudentId,
+                    FullName = e.Student.FullName,
+                    Email = e.Student.Email,
+                    DateOfBirth = e.Student.DateOfBirth
+                } : null,
+                Course = e.Course != null ? new CourseResponse
+                {
+                    CourseId = e.Course.CourseId,
+                    CourseName = e.Course.CourseName,
+                    SemesterId = e.Course.SemesterId
+                } : null
             });
 
             if (!string.IsNullOrWhiteSpace(queryParams.Fields))
@@ -76,10 +93,15 @@ namespace PRN232.Lab1.API.Controllers
             return Ok(ApiResponse<IEnumerable<EnrollmentResponse>>.Ok(responseModels, metadata));
         }
 
+        /// <summary>
+        /// Get enrollment details by ID
+        /// </summary>
+        /// <param name="id">ID of the enrollment to retrieve</param>
+        /// <param name="expand">Expand related entities (e.g. 'student' or 'course')</param>
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetEnrollmentById(int id)
+        public async Task<IActionResult> GetEnrollmentById(int id, [FromQuery] string? expand)
         {
-            var enrollment = await _enrollmentService.GetEnrollmentByIdAsync(id);
+            var enrollment = await _enrollmentService.GetEnrollmentByIdAsync(id, expand);
 
             if (enrollment == null)
             {
@@ -92,12 +114,29 @@ namespace PRN232.Lab1.API.Controllers
                 StudentId = enrollment.StudentId,
                 CourseId = enrollment.CourseId,
                 EnrollDate = enrollment.EnrollDate,
-                Status = enrollment.Status
+                Status = enrollment.Status,
+                Student = enrollment.Student != null ? new StudentResponse
+                {
+                    StudentId = enrollment.Student.StudentId,
+                    FullName = enrollment.Student.FullName,
+                    Email = enrollment.Student.Email,
+                    DateOfBirth = enrollment.Student.DateOfBirth
+                } : null,
+                Course = enrollment.Course != null ? new CourseResponse
+                {
+                    CourseId = enrollment.Course.CourseId,
+                    CourseName = enrollment.Course.CourseName,
+                    SemesterId = enrollment.Course.SemesterId
+                } : null
             };
 
             return Ok(ApiResponse<EnrollmentResponse>.Ok(responseModel));
         }
 
+        /// <summary>
+        /// Create a new student enrollment
+        /// </summary>
+        /// <param name="request">The enrollment creation request body</param>
         [HttpPost]
         public async Task<IActionResult> CreateEnrollment([FromBody] EnrollmentRequest request)
         {
@@ -128,6 +167,11 @@ namespace PRN232.Lab1.API.Controllers
             return CreatedAtAction(nameof(GetEnrollmentById), new { id = response.EnrollmentId }, ApiResponse<EnrollmentResponse>.Ok(response));
         }
 
+        /// <summary>
+        /// Update an existing enrollment by ID
+        /// </summary>
+        /// <param name="id">ID of the enrollment to update</param>
+        /// <param name="request">The enrollment update request body</param>
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateEnrollment(int id, [FromBody] EnrollmentRequest request)
         {
@@ -154,6 +198,10 @@ namespace PRN232.Lab1.API.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Delete an existing enrollment by ID
+        /// </summary>
+        /// <param name="id">ID of the enrollment to delete</param>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEnrollment(int id)
         {

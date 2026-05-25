@@ -50,9 +50,14 @@ namespace PRN232.Lab1.Repositories.Repository
             return (items, totalCount);
         }
 
-        public async Task<Semester> GetSemesterByIdAsync(int id)
+        public async Task<Semester> GetSemesterByIdAsync(int id, string? expand = null)
         {
-            return await _context.Semesters.FirstOrDefaultAsync(s => s.SemesterId == id);
+            var query = _context.Semesters.AsQueryable();
+            if (!string.IsNullOrWhiteSpace(expand) && expand.Contains("course", StringComparison.OrdinalIgnoreCase))
+            {
+                query = query.Include(s => s.Courses);
+            }
+            return await query.FirstOrDefaultAsync(s => s.SemesterId == id);
         }
 
         public async Task<Semester> CreateSemesterAsync(Semester semester)

@@ -12,6 +12,8 @@ namespace PRN232.Lab1.Services.BusinessModels
         public int StudentId { get; set; }
         public int CourseId { get; set; }
         public DateTime EnrollDate { get; set; }
-        public string Status { get; set; }
+        public string Status { get; set; } = null!;
+        public StudentBusinessModel? Student { get; set; }
+        public CourseBusinessModel? Course { get; set; }
     }
 }

@@ -8,5 +8,6 @@ namespace PRN232.Lab1.API.ResponseModels
         public string SemesterName { get; set; } = null!;
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+        public List<CourseResponse>? Courses { get; set; }
     }
 }
